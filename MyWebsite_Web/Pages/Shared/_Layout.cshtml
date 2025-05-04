@@ -7,29 +7,39 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyWebsite_Web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">MyWebsite_Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Toggle Button (unchanged) -->
+    <!-- Toggle Button -->
+    <!-- Toggle Button -->
+    <button id="toggleSidebar"
+            class="btn btn-primary rounded-circle shadow position-fixed top-0 start-0 m-3 d-flex align-items-center justify-content-center"
+            style="width: 50px; height: 50px; z-index: 1050;">
+        ☰
+    </button>
+
+    <!-- Sidebar -->
+    <div id="sidebar"
+         class=" p-3 position-fixed top-0 start-0 vh-100 sidebar-visible " style="margin-top: 6rem;">
+        <h5 class="mb-4">MyWebsite_Web</h5>
+        <a class="btn btn-outline-primary w-100 mb-3 text-start rounded-pill shadow-sm" asp-page="/Index"><i class="bi bi-house-fill"></i> Home</a>
+        <a class="btn btn-outline-primary w-100 mb-3 text-start rounded-pill shadow-sm" asp-page="/Privacy">🔒 Privacy</a>
+        <a class="btn btn-outline-primary w-100 mb-3 text-start rounded-pill shadow-sm" asp-page="/Contact">📧 Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="with-sidebar p-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    </div>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -45,6 +55,26 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+<script>
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.getElementById('mainContent');
+
+    toggleBtn?.addEventListener('click', () => {
+        const isOpen = sidebar.classList.contains('sidebar-visible');
+
+        sidebar.classList.toggle('sidebar-hidden', isOpen);
+        sidebar.classList.toggle('sidebar-visible', !isOpen);
+
+        mainContent.classList.toggle('with-sidebar', !isOpen);
+        mainContent.classList.toggle('full-width', isOpen);
+
+        // Change button icon
+        toggleBtn.innerHTML = isOpen ? '☰' : '✕';
+    });
+</script>
+
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

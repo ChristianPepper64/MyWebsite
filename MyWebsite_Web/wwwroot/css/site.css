@@ -19,4 +19,36 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: aliceblue;
 }
+#sidebar {
+    width: 220px;
+    transition: transform 0.3s ease;
+    z-index: 1040;
+}
+
+.sidebar-hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar-visible {
+    transform: translateX(0);
+}
+
+#mainContent.with-sidebar {
+    margin-left: 220px;
+    transition: margin-left 0.3s ease;
+}
+
+#mainContent.full-width {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+#sidebar a.btn:hover {
+    background-color: #0d6efd; /* Bootstrap primary color */
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+
+
