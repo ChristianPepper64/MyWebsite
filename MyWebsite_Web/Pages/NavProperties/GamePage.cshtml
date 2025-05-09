@@ -8,15 +8,15 @@
 
     <div class="unity-container mx-auto" style="width: 960px; height: 600px; position: relative;">
         <div id="unity-loading" style="color:white; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:10;">Loading...</div>
-        <canvas id="unity-canvas" width="960" height="600"></canvas>
+        <canvas id="unity-canvas"></canvas>
 
-        <script src="/Games/SharkGame/Build/SharkGame.loader.js"></script>
+        <script src="/Games/SharkGameBuild/Build/SharkGameBuild.loader.js"></script>
         <script>
             createUnityInstance(document.querySelector("#unity-canvas"), {
-                dataUrl: "/Games/SharkGame/Build/SharkGame.data.br",
-                frameworkUrl: "/Games/SharkGame/Build/SharkGame.framework.js.br",
-                codeUrl: "/Games/SharkGame/Build/SharkGame.wasm.br",
-                streamingAssetsUrl: "/Games/SharkGame/StreamingAssets",
+                dataUrl: "/Games/SharkGameBuild/Build/SharkGameBuild.data",
+                frameworkUrl: "/Games/SharkGameBuild/Build/SharkGameBuild.framework.js",
+                codeUrl: "/Games/SharkGameBuild/Build/SharkGameBuild.wasm",
+                streamingAssetsUrl: "/Games/SharkGameBuild/StreamingAssets",
                 companyName: "YourName",
                 productName: "SharkGame",
                 productVersion: "1.0"
@@ -26,5 +26,5 @@
                 document.getElementById("unity-loading").style.display = "none";
             });
         </script>
-    </div>
+
 </div>
