@@ -1,0 +1,30 @@
+﻿@page
+@model MyWebsite_Web.Pages.NavProperties.GamePageModel
+@{
+}
+
+<div class="container text-center my-5">
+    <h1 class="mb-4">Play My Game</h1>
+
+    <div class="unity-container mx-auto" style="width: 960px; height: 600px; position: relative;">
+        <div id="unity-loading" style="color:white; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:10;">Loading...</div>
+        <canvas id="unity-canvas" width="960" height="600"></canvas>
+
+        <script src="/Games/SharkGame/Build/SharkGame.loader.js"></script>
+        <script>
+            createUnityInstance(document.querySelector("#unity-canvas"), {
+                dataUrl: "/Games/SharkGame/Build/SharkGame.data.br",
+                frameworkUrl: "/Games/SharkGame/Build/SharkGame.framework.js.br",
+                codeUrl: "/Games/SharkGame/Build/SharkGame.wasm.br",
+                streamingAssetsUrl: "/Games/SharkGame/StreamingAssets",
+                companyName: "YourName",
+                productName: "SharkGame",
+                productVersion: "1.0"
+            }, (progress) => {
+                document.getElementById("unity-loading").innerText = `Loading... ${Math.round(progress * 100)}%`;
+            }).then(() => {
+                document.getElementById("unity-loading").style.display = "none";
+            });
+        </script>
+    </div>
+</div>

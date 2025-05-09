@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Pages\AdminPages\" />
+    <Folder Include="wwwroot\Games\SharkGame\" />
   </ItemGroup>
 
 </Project>
