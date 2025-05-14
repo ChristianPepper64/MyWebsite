@@ -151,6 +151,12 @@ footer a:hover {
     image-rendering: pixelated;
 }
 
+#unity-loading {
+    transform: scale(0.5);
+    transform-origin: center;
+}
+
+
 
 
 
