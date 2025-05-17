@@ -12,6 +12,19 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+.btn:hover,
+.btn:focus {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+    transition: all 0.25s ease-in-out;
+}
+
+/*.img-glow {
+    border: 4px solid white;
+    box-shadow: 0 0 20px white;
+}*/
+
 html {
   position: relative;
   min-height: 100%;
@@ -59,8 +72,18 @@ body::before {
 }
 
 h5, h1, h2, h3, h4 {
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    color: white;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.text-white-glow {
+    color: white;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 #mainContent.with-sidebar {
@@ -119,8 +142,20 @@ a, a:hover {
     text-decoration: underline;
 }
 
+a {
+    color: #ccc;
+    text-decoration: none;
+}
+
 .btn {
-    border-radius: 0;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
 }
 
 
@@ -155,6 +190,33 @@ footer a:hover {
     transform: scale(0.5);
     transform-origin: center;
 }
+
+.scroll-box {
+    height: 300px; /* Fixed height */
+    overflow-y: auto; /* Scroll when content is too tall */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.glass-box {
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(4px);
+    border: 1px solid white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.05); /* subtle background layer */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+}
+
+
 
 
 
