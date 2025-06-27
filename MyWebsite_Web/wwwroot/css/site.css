@@ -98,7 +98,7 @@ h5, h1, h2, h3, h4 {
 
 #sidebar .btn:hover, #sidebar .btn:focus {
     background-color: white;
-    color: black;
+    color: A3CAE9;
     border-color: white;
     transition: all 0.2s ease;
 }
