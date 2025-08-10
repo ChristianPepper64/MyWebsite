@@ -18,7 +18,7 @@ html {
 body {
     margin-bottom: 60px;
     font-family: 'Inter', sans-serif;
- /* Centers the image */
+    /* Centers the image */
 }
 
 #mainContent {
@@ -152,7 +152,6 @@ h5, h1, h2, h3, h4 {
     border-bottom: 1px solid #444;
     padding-bottom: 0.5rem;
     text-shadow: 2px 2px 0px #ACACAC;
-    
 }
 
     h1#introText {
@@ -169,6 +168,12 @@ h5, h1, h2, h3, h4 {
         font-size: 10rem;
         border-bottom: 0px;
     }
+
+    h1.coolBorder{
+
+
+    }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
