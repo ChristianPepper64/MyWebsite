@@ -169,9 +169,15 @@ h5, h1, h2, h3, h4 {
         border-bottom: 0px;
     }
 
-    h1.coolBorder{
-
-
+    h1.coolBorder {
+        background-color: rgba(67.5, 67.5, 67.5, .10);
+        text-align: center;
+        border-bottom: none;
+        padding-bottom:initial;
+        border-radius: 10px;
+        padding: 10px 10px;
+        width:300px;
+        
     }
 
 @keyframes fadeInUp {
