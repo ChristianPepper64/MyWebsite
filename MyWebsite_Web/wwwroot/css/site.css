@@ -1,15 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400|Playfair+Display:400,700,400italic|Libre+Baskerville:400,700,400italic|Muli:300,400|Open+Sans:400,300,700|Oswald:400,700|Raleway:400,100,300,700|Montserrat:400,700|Merriweather:400,300,300italic,400italic,700|Bree+Serif|Vollkorn:400italic,400,700|Abril+Fatface|Cardo:400,400italic);
+
+
+/*-----------------------------------------General------------------------------------------*/
+
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
+body {
+    margin-bottom: 60px;
+    font-family: 'Inter', sans-serif;
+ /* Centers the image */
+}
+
+#mainContent {
+    color: white;
+    background-image: url('../Images/Lucy.png'); /* Replace with your image URL */
+    background-size: 500px 500px; /* Ensures the image covers the entire page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center;
+    min-height: 100vh; /* Ensures the main content covers the full viewport height */
+}
+
+
+    #mainContent.with-sidebar {
+        margin-left: 220px;
+        transition: margin-left 0.3s ease;
+    }
+
+    #mainContent.full-width {
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+    }
+
+/*-----------------------------------------Buttons------------------------------------------*/
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 .btn:hover,
@@ -18,124 +53,6 @@ html {
     color: black;
     box-shadow: 0 0 10px white;
     transition: all 0.25s ease-in-out;
-}
-
-/*.img-glow {
-    border: 4px solid white;
-    box-shadow: 0 0 20px white;
-}*/
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-    margin-bottom: 60px;
-    background-color: black;
-    color: white;
-    font-family: 'Inter', sans-serif;
-}
-
-body::before {
-     content: "";
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-image: url('/images/static-noise.gif'); /* or base64 */
-     opacity: 0.05;
-     pointer-events: none;
-     z-index: 0;
-    }
-
-#sidebar {
-    background-color: #A3CAE9;
-    border-right: 1px solid white;
-    width: 220px;
-    transition: transform 0.3s ease;
-    z-index: 1040;
-}
-
-.sidebar-hidden {
-    transform: translateX(-100%);
-}
-
-.sidebar-visible {
-    transform: translateX(0);
-}
-
-#mainContent {
-    background-color: #E9ECEE;
-    color: white;
-}
-
-h5, h1, h2, h3, h4 {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 1rem;
-    color: white;
-    border-bottom: 1px solid #444;
-    padding-bottom: 0.5rem;
-    text-shadow: 2px 2px 0px #ACACAC;
-}
-
-.text-white-glow {
-    color: white;
-    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
-}
-
-#mainContent.with-sidebar {
-    margin-left: 220px;
-    transition: margin-left 0.3s ease;
-}
-
-#mainContent.full-width {
-    margin-left: 0;
-    transition: margin-left 0.3s ease;
-}
-
-#sidebar .btn:hover, #sidebar .btn:focus {
-    background-color: white;
-    color: A3CAE9;
-    border-color: white;
-    transition: all 0.2s ease;
-}
-
-
-#sidebar a.btn {
-    background-color: #ACACAC; /* Bootstrap primary color */
-    color: white;
-    border: 1px solid white;
-}
-#sidebar a.btn:hover, #sidebar a.btn:focus {
-    background-color: white; /* Bootstrap primary color */
-    color: black;
-    transition: background-color 0.2s ease;
-}
-
-#toggleSidebar {
-    background-color: #A3CAE9;
-    color: #A3CAE9;
-    border: 1px solid #A3CAE9;
-    border-radius: 0;
-    width: 50px;
-    height: 50px;
-    z-index: 1050;
-    transition: background-color 0.2s ease;
-}
-
- #toggleSidebar:hover {
-     background-color: gray;
-     color: white;
-     border-color: white;
- }
-
-#toggleIcon {
-    color: black;
-    transition: color 0.2s ease;
 }
 
 a, a:hover {
@@ -160,6 +77,141 @@ a {
 }
 
 
+/*-----------------------------------------Side Bar------------------------------------------*/
+
+
+#sidebar {
+    background-color: #f8f9fa;
+    border-right: 1px solid white;
+    width: 220px;
+    transition: transform 0.3s ease;
+    z-index: 1040;
+}
+
+.sidebar-hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar-visible {
+    transform: translateX(0);
+}
+
+#sidebar .btn:hover, #sidebar .btn:focus {
+    background-color: white;
+    color: #A3CAE9;
+    border-color: white;
+    transition: all 0.2s ease;
+}
+
+
+#sidebar a.btn {
+    background-color: #ACACAC; /* Bootstrap primary color */
+    color: white;
+    border: 1px solid white;
+}
+
+    #sidebar a.btn:hover, #sidebar a.btn:focus {
+        background-color: white; /* Bootstrap primary color */
+        color: black;
+        transition: background-color 0.2s ease;
+    }
+
+#toggleSidebar {
+    background-color: white;
+    color: black;
+    border: 1px solid #A3CAE9;
+    border-radius: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 1050;
+    transition: background-color 0.2s ease;
+}
+
+    #toggleSidebar:hover {
+        background-color: gray;
+        color: white;
+        border-color: white;
+    }
+
+#toggleIcon {
+    color: black;
+    transition: color 0.2s ease;
+}
+
+
+
+/*-----------------------------------------Text------------------------------------------*/
+
+
+h5, h1, h2, h3, h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    color: black;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+    text-shadow: 2px 2px 0px #ACACAC;
+    
+}
+
+    h1#introText {
+        font-size: 10rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        color: white;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease-out;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-size: 10rem;
+        border-bottom: 0px;
+    }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 5;
+        transform: translateY(0);
+    }
+}
+
+
+
+.line-after-heading:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 4rem;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -2rem;
+}
+
+
+.text-white-glow {
+    color: #ACACAC;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.text {
+    text-shadow: 2px 2px 0px #ACACAC;
+}
+
+
+/*-----------------------------------------Footer------------------------------------------*/
+
+
+
 footer {
     background-color: #A3A3A3;
     color: white;
@@ -170,14 +222,17 @@ footer {
     padding: 1rem 0;
 }
 
-footer a {
-    color: white;
-    text-decoration: underline;
-}
+    footer a {
+        color: white;
+        text-decoration: underline;
+    }
 
-footer a:hover {
-   color: gray;
-}
+        footer a:hover {
+            color: gray;
+        }
+
+/*-----------------------------------------Unity------------------------------------------*/
+
 
 #unity-canvas {
     width: 100%;
@@ -192,6 +247,9 @@ footer a:hover {
     transform-origin: center;
 }
 
+/*-----------------------------------------Boxes------------------------------------------*/
+
+
 .scroll-box {
     height: 300px; /* Fixed height */
     overflow-y: auto; /* Scroll when content is too tall */
@@ -199,10 +257,11 @@ footer a:hover {
 }
 
 .glass-box {
-    background-color: #A3CAE9;
+    background-color: white;
     backdrop-filter: blur(4px);
     /* border: 1px solid white;*/
     padding: 2rem;
+    color: black
     /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);*/
 }
 
@@ -211,8 +270,6 @@ footer a:hover {
     backdrop-filter: blur(4px);
     padding: 2rem;
     border-radius: 20px;
-    width: 100%
-    
 }
 
 
@@ -225,9 +282,27 @@ footer a:hover {
     padding: 2rem;
 }
 
-.text {
-    text-shadow: 2px 2px 0px #ACACAC;
+
+
+/*-----------------------------------------Video------------------------------------------*/
+
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* push it behind other content */
+    width: 100%;
+    object-fit: cover;
+    height: 700px;
+    /* Add blur and dim effect */
+    filter: blur(3px) brightness(100%);
 }
+
+/*.img-glow {
+    border: 4px solid white;
+    box-shadow: 0 0 20px white;
+}*/
 
 
 
