@@ -316,15 +316,19 @@ footer {
     height: auto;
     width: auto;
     position: relative;
-    animation: moveSideToSide 3s infinite alternate;
+    animation: moveSideToSide 3s steps(1) infinite;
+    margin-left: 55px;
 }
 
 @keyframes moveSideToSide {
     0%{
-        transform: translateX(0);
+        transform: rotate(-10deg);
     }
-    100%{
-        transform: translateX(200px);
+    50%{
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
     }
 }
 
