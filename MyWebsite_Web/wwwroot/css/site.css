@@ -173,11 +173,13 @@ h5, h1, h2, h3, h4 {
         background-color: rgba(67.5, 67.5, 67.5, .10);
         text-align: center;
         border-bottom: none;
-        padding-bottom:initial;
+        padding-bottom: initial;
         border-radius: 10px;
-        padding: 10px 10px;
-        width:300px;
-        
+        /*padding-left: 50%;*/
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /*width: 750px;*/
+        color: white;
     }
 
 @keyframes fadeInUp {
