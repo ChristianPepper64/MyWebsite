@@ -37,3 +37,32 @@ toggleBtn?.addEventListener('click', () => {
 
     toggleIcon.className = isOpen ? 'bi bi-list fs-4' : 'bi bi-x-lg fs-4';
 });
+
+//Toggle expended Content for LL
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('[href="#additionalProjectsLL"]');
+    const collapseElement = document.getElementById('additionalProjectsLL');
+
+    collapseElement.addEventListener('show.bs.collapse', () => {
+        toggleBtn.textContent = 'Show Less';
+    });
+
+    collapseElement.addEventListener('hide.bs.collapse', () => {
+        toggleBtn.textContent = 'Show More Details';
+    });
+});
+
+//Toggle expended Content for FA
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleBtn = document.querySelector('[href="#additionalProjectsFA"]');
+    const collapseElement = document.getElementById('additionalProjectsFA');
+
+    collapseElement.addEventListener('show.bs.collapse', () => {
+        toggleBtn.textContent = 'Show Less';
+    });
+
+    collapseElement.addEventListener('hide.bs.collapse', () => {
+        toggleBtn.textContent = 'Show More Details';
+    });
+});
+
