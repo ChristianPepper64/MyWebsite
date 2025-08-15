@@ -50,24 +50,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    <script>
-        const toggleBtn = document.getElementById('toggleSidebar');
-        const sidebar = document.getElementById('sidebar');
-        const mainContent = document.getElementById('mainContent');
-        const toggleIcon = document.getElementById('toggleIcon');
-
-        toggleBtn?.addEventListener('click', () => {
-            const isOpen = sidebar.classList.contains('sidebar-visible');
-
-            sidebar.classList.toggle('sidebar-hidden', isOpen);
-            sidebar.classList.toggle('sidebar-visible', !isOpen);
-
-            mainContent.classList.toggle('with-sidebar', !isOpen);
-            mainContent.classList.toggle('full-width', isOpen);
-
-            toggleIcon.className = isOpen ? 'bi bi-list fs-4' : 'bi bi-x-lg fs-4';
-        });
-    </script>
+    <script src="~/js/site.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

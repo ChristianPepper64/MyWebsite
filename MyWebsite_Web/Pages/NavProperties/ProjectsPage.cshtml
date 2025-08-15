@@ -28,6 +28,7 @@
                 <img src="~/images/Intro.png"
                      alt="Christian Pepper"
                      class="img-fluid"
+                     onclick="expandImage(this)"
                      style="max-height: 600px;" />
             </div>
             <p class="mt-3 text-uppercase fs-5" style="letter-spacing: 1px;">Home Depot and Lowes Balance Sheet</p>
@@ -48,6 +49,7 @@
                         <img src="~/images/Screenshot 2025-06-13 034355.png"
                              alt="Project Thumbnail"
                              class="img-fluid"
+                             onclick="expandImage(this)"
                              style="max-height: 600px;" />
                     </div>
                 </div>
@@ -83,6 +85,7 @@
                         <img src="~/images/Risk Analysis.png"
                              alt="Another Image"
                              class="img-fluid"
+                             onclick="expandImage(this)"
                              style="max-height: 300px;" />
                     </div>
                 </div>
@@ -92,6 +95,7 @@
                         <img src="~/images/Operating Activities.png"
                              alt="Another Image"
                              class="img-fluid"
+                             onclick="expandImage(this)"
                              style="max-height: 300px;" />
                     </div>
                 </div>
@@ -126,6 +130,7 @@
                         <img src="~/images/COP.png"
                              alt="Another Image"
                              class="img-fluid"
+                             onclick="expandImage(this)"
                              style="max-height: 300px;" />
                     </div>
                 </div>
@@ -158,10 +163,11 @@
         </div>
 
         <div class="col-md-6 text-center align-content-center">
-            <div class="p-3 glass-box align-content-center image">
+            <div class="p-3 glass-box align-content-center">
                 <img src="~/images/LLHome.png"
                      alt="Christian Pepper"
                      class="img-fluid"
+                     onclick="expandImage(this)"
                      style="max-height: 600px;" />
             </div>
             <p class="mt-3 text-uppercase fs-5" style="letter-spacing: 1px;">Home Page</p>
@@ -182,6 +188,7 @@
                         <img src="~/images/LLTabBar.png"
                              alt="Project Thumbnail"
                              class="img-fluid"
+                             onclick="expandImage(this)"
                              style="max-height: 600px;" />
                     </div>
                 </div>
@@ -221,26 +228,28 @@
                         <img src="~/images/LLAdminView.png"
                              alt="Another Image"
                              class="img-fluid"
+                             onclick="expandImage(this)"
                              style="max-height: 300px;" />
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="p-3 glass-box align-content-center scroll-box">
-                        <img src="~/images/Operating Activities.png"
+                        <img src="~/images/LLAddSong.png"
                              alt="Another Image"
                              class="img-fluid"
+                             onclick="expandImage(this)"
                              style="max-height: 300px;" />
                     </div>
                 </div>
 
                 <div class="col-md-8">
                     <div class="glass-box scroll-box">
-                        <h2 class="display-6 fw-bold ">Inputs and Assumptions</h2>
+                        <h2 class="display-6 fw-bold ">Add Songs</h2>
                         <p class="lead">
-                            The Inputs and Assumptions page consists of three Tables:
-                            Operating Activities, Investing Activities, and Financing Activities.
-                            On the left side of each of these tables is an identical Table containing future assumptions up to 2028.
+                         The Add song page is the location in which users can create a collections of songs.
+                         The user must create a name, length, and image for the song. The user then
+                         must select locations and genres, which are created by admins.
                         </p>
                     </div>
                 </div>
@@ -248,22 +257,21 @@
 
                 <div class="col-md-8">
                     <div class="glass-box scroll-box">
-                        <h2 class="display-6 fw-bold ">Forecasting Model</h2>
+                        <h2 class="display-6 fw-bold ">Browse Songs</h2>
                         <p class="lead">
-                            The final Page is the Forecasting model, which uses the previous two pages to create projections up to 2028.
-                            The sections included are: a Revenue Schedule, a Cost of Production Schedule, an Income Statement,
-                            a Cash Flow Statement, a Balance Sheet, a Depreciation and Amortization Schedule, an Income Tax Schedule,
-                            a Working Capital Schedule, a Debt and Interest Schedule, and a Shareholders' Equity Schedule.
-
+                        After adding songs they will appear in the browse songs tab. In the Browse Songs page, 
+                        you can add, edit, and delete the songs that you have created. The songs are displayed with
+                        the cover on the left, and the details that the user provided on the left.
                         </p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="p-3 glass-box align-content-center scroll-box">
-                        <img src="~/images/COP.png"
+                        <img src="~/images/LLBrowseSong.png"
                              alt="Another Image"
                              class="img-fluid"
+                             onclick="expandImage(this)"
                              style="max-height: 300px;" />
                     </div>
                 </div>
@@ -271,9 +279,6 @@
         </div>
     </div>
 </div>
-<script>
-    function expandImage(img) {
-      img.classList.toggle('expanded'); // Toggles the expanded class
-    }
-</script>
+
+<script src="~/js/site.js"></script>
 

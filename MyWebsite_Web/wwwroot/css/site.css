@@ -334,14 +334,36 @@ footer {
     }
 }
 
-.image{
+img {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.expanded{
-    transform: scale(2);
+/* Lightbox overlay (initially hidden) */
+#lightboxOverlay {
+    display: none; /* Hidden until triggered */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
 }
+
+    /* Expanded image in the overlay */
+    #lightboxOverlay img {
+        max-width: 90%;
+        max-height: 90%;
+        cursor: pointer;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+        border-radius: 8px;
+    }
+
+
+
 
 /*.img-glow {
     border: 4px solid white;
