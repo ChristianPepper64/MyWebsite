@@ -334,6 +334,15 @@ footer {
     }
 }
 
+.image{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.expanded{
+    transform: scale(2);
+}
+
 /*.img-glow {
     border: 4px solid white;
     box-shadow: 0 0 20px white;

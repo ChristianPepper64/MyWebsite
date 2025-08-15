@@ -134,4 +134,146 @@
     </div>
 </div>
 
+<div class="container glass-container my-5 text-white">
+    <div class="row gy-5">
+        <!-- Top Section -->
+        <div class="col-md-6 d-flex flex-column gap-4">
+            <div class="glass-box scroll-box" style="height: 400px;">
+                <h1 class="display-5 fw-bold">Local Legends</h1>
+                <p class="lead">
+                    A website designed to help users create collections of songs with artists from various locations.
+
+                    Local legends was created in Visual Studio using ASP.NET. The database was designed using LucidChart
+                    and implemented using Microsoft SQL Server Management Studio. At the end of the project, the database
+                    was uploaded to Azure Servers to enable actual users to access the website. The team that contributed 
+                    to the website consisted of Christian Pepper(me), Jake Russell, and Tristen Timmons.
+
+                    Website Link: <a href="//locallegendsweb20250703010822-fnascrgzazawfac6.centralus-01.azurewebsites.net/" target="_blank">Local Legends</a>
+                </p>
+            </div>
+            <div class="glass-box scroll-box" style="height: 200px;">
+                <h2 class="display-6 fw-bold">Attributes</h2>
+                <p class="lead">ASP.NET, HTML/CSS/JavaScript, SQL, C#, Microsoft Azure, SQL Server Management Studio 20 </p>
+            </div>
+        </div>
+
+        <div class="col-md-6 text-center align-content-center">
+            <div class="p-3 glass-box align-content-center image">
+                <img src="~/images/LLHome.png"
+                     alt="Christian Pepper"
+                     class="img-fluid"
+                     style="max-height: 600px;" />
+            </div>
+            <p class="mt-3 text-uppercase fs-5" style="letter-spacing: 1px;">Home Page</p>
+        </div>
+
+        <!-- Toggle Button -->
+        <div class="col-12 text-center mt-4">
+            <a class="btn btn-outline-primary w-100 mb-3 text-start shadow-sm" data-bs-toggle="collapse" href="#additionalProjectsLL" role="button" aria-expanded="false" aria-controls="additionalProjects">
+                Show More Details
+            </a>
+        </div>
+
+        <!-- Collapsible Content -->
+        <div class="collapse mt-4" id="additionalProjectsLL">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <div class="p-3 glass-box align-content-center scroll-box">
+                        <img src="~/images/LLTabBar.png"
+                             alt="Project Thumbnail"
+                             class="img-fluid"
+                             style="max-height: 600px;" />
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="glass-box scroll-box">
+                        <h2 class="display-6 fw-bold ">Home Page</h2>
+                        <p class="lead">
+                            The Local Legends home page consists of a home tab, an add song tab,
+                            a calendar tab, a logo (about us tab), a browse song tab, login tab,
+                            and a register tab. These tabs all redirect you to the their respective pages.
+                            Below these tabs is a looping blurred background video of several popular
+                            artists preforming. Below this is a section of genres. Selecting a genre will
+                            take you to a page with all the songs you created of the selected genre.
+                            At the bottom of the page is a black footer with contact information.
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="glass-box scroll-box">
+                        <h2 class="display-6 fw-bold ">Admin Home Page</h2>
+                        <p class="lead">
+                            There are additional tabs when signed in, and even
+                            more tabs when signed in as an admin. A signed in
+                            user has access to the profile page, where they can
+                            customize their profile. Admins additionally have access
+                            to the locations, genres, and artists tabs where they can
+                            create location, genre and artist data.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-3 glass-box align-content-center scroll-box">
+                        <img src="~/images/LLAdminView.png"
+                             alt="Another Image"
+                             class="img-fluid"
+                             style="max-height: 300px;" />
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-3 glass-box align-content-center scroll-box">
+                        <img src="~/images/Operating Activities.png"
+                             alt="Another Image"
+                             class="img-fluid"
+                             style="max-height: 300px;" />
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="glass-box scroll-box">
+                        <h2 class="display-6 fw-bold ">Inputs and Assumptions</h2>
+                        <p class="lead">
+                            The Inputs and Assumptions page consists of three Tables:
+                            Operating Activities, Investing Activities, and Financing Activities.
+                            On the left side of each of these tables is an identical Table containing future assumptions up to 2028.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-8">
+                    <div class="glass-box scroll-box">
+                        <h2 class="display-6 fw-bold ">Forecasting Model</h2>
+                        <p class="lead">
+                            The final Page is the Forecasting model, which uses the previous two pages to create projections up to 2028.
+                            The sections included are: a Revenue Schedule, a Cost of Production Schedule, an Income Statement,
+                            a Cash Flow Statement, a Balance Sheet, a Depreciation and Amortization Schedule, an Income Tax Schedule,
+                            a Working Capital Schedule, a Debt and Interest Schedule, and a Shareholders' Equity Schedule.
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-3 glass-box align-content-center scroll-box">
+                        <img src="~/images/COP.png"
+                             alt="Another Image"
+                             class="img-fluid"
+                             style="max-height: 300px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function expandImage(img) {
+      img.classList.toggle('expanded'); // Toggles the expanded class
+    }
+</script>
 
