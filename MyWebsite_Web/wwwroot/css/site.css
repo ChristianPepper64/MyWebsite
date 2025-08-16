@@ -302,7 +302,7 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
     padding: 2rem;
-    border: dashed;
+    border: solid;
     border-color: black
 }
 .exp-box {
@@ -313,6 +313,16 @@ footer {
     color: black;
     border: dashed;
     border-color: black
+}
+
+.exp-title {
+    background: rgba(215, 215, 220, 0.8); /* subtle background layer */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+    border-radius: 20px;
 }
 
 
