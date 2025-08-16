@@ -280,5 +280,110 @@
     </div>
 </div>
 
+
+<div class="container glass-container my-5 text-white">
+    <div class="row gy-5">
+        <!-- Top Section -->
+        <div class="col-md-6 d-flex flex-column gap-4">
+            <div class="glass-box scroll-box" style="height: 400px;">
+                <h1 class="display-5 fw-bold">Shark Dash</h1>
+                <p class="lead">
+                    A Flappy Bird style game that takes place underwater
+
+                    Game Link: <a class="" href="//sharkdash.azurewebsites.net/" target="_blank">Shark Dash</a>
+                    it can also be accessed through the game tab.
+                </p>
+            </div>
+            <div class="glass-box scroll-box" style="height: 200px;">
+                <h2 class="display-6 fw-bold">Attributes</h2>
+                <p class="lead">Unity, C#, Visual Studios, Game Development</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 text-center align-content-center">
+            <div class="p-3 glass-box align-content-center">
+                <img src="~/images/SDHomeScreen.png"
+                     alt="SDHomeScreen"
+                     class="img-fluid"
+                     onclick="expandImage(this)"
+                     style="max-height: 600px;" />
+            </div>
+            <p class="mt-3 text-uppercase fs-5" style="letter-spacing: 1px;">Home Screen</p>
+        </div>
+
+        <!-- Toggle Button -->
+        <div class="col-12 text-center mt-4">
+            <a class="btn btn-outline-primary w-100 mb-3 text-start shadow-sm" data-bs-toggle="collapse" href="#additionalProjectsSD" role="button" aria-expanded="false" aria-controls="additionalProjects">
+                Show More Details
+            </a>
+        </div>
+
+        <!-- Collapsible Content -->
+        <div class="collapse mt-4" id="additionalProjectsSD">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <div class="p-3 glass-box align-content-center scroll-box">
+                        <img src="~/images/SDGameOverScreen.png"
+                             alt="SDGameOverScreen"
+                             class="img-fluid"
+                             onclick="expandImage(this)"
+                             style="max-height: 600px;" />
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="glass-box scroll-box">
+                        <h2 class="display-6 fw-bold ">Gameplay</h2>
+                        <p class="lead">
+                            Shark dash was developed in unity using c#. 
+                            This game was scripted in Visual Studio, and 
+                            the assets were found online. Gravity physics 
+                            are used to drag a shark to the bottom of the screen, 
+                            and tapping the space bar provides a small jump upwards. 
+                            A constant stream of blue pipes with colliders are 
+                            spawned at random heights out of screen. These pipes 
+                            cross the screen from right to left at a medium speed. 
+                            When the pipes collide into the shark, a game over screen 
+                            is displayed and the shark falls to the bottom of the screen. 
+                            The pipes are deleted shortly after passing the left side
+                            of the screen to improve performance.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="glass-box scroll-box">
+                        <h2 class="display-6 fw-bold ">Screens</h2>
+                        <p class="lead">
+                            There is a home screen, options screen, 
+                            and pause screen. The home screen has a 
+                            play button, options button, and exit 
+                            button(not included in the web version). 
+                            The play button exits the home scene and 
+                            enters the gameplay scene. The options 
+                            button has a volume slider that can be used 
+                            to adjust a song looping in the background. 
+                            The pause screen freezes the gameplay scene 
+                            and displays: continue, options, and return 
+                            to home screen.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-3 glass-box align-content-center scroll-box">
+                        <img src="~/images/SD Options Screen.png"
+                             alt="Another Image"
+                             class="img-fluid"
+                             onclick="expandImage(this)"
+                             style="max-height: 300px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script src="~/js/site.js"></script>
 

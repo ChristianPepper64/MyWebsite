@@ -60,6 +60,10 @@ a, a:hover {
     text-decoration: underline;
 }
 
+.whitebg, a:hover{
+    color: antiquewhite
+}
+
 a {
     color: #ccc;
     text-decoration: none;
